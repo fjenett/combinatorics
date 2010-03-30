@@ -1,0 +1,4 @@
+bin/
+build/
+hidden/
+.DS_Store

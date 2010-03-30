@@ -1,0 +1,532 @@
+// !$*UTF8*$!
+{
+	00E6828EFEC88D1A11DB9C8B /* Project object */ = {
+		activeBuildConfigurationName = Release;
+		activeExecutable = 130F8B98001BDF0A11CA292A /* java */;
+		activeTarget = 0A8B99D50B8F57BB003CD01B /* combinations_lib */;
+		addToTargets = (
+		);
+		codeSenseManager = 10B35A390DF70ADB004A2689 /* Code sense */;
+		executables = (
+			130F8B98001BDF0A11CA292A /* java */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXBookmarksDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBookmarksDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					200,
+					200,
+					526,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBookmarksDataSource_LocationID,
+					PBXBookmarksDataSource_NameID,
+					PBXBookmarksDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					300,
+					881,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					801,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					751,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 291587904;
+			PBXWorkspaceStateSaveDate = 291587904;
+		};
+		perUserProjectItems = {
+			105E68430EE1568F009A4983 = 105E68430EE1568F009A4983 /* PBXTextBookmark */;
+			10B35A780DF7151B004A2689 = 10B35A780DF7151B004A2689 /* PBXTextBookmark */;
+			10B35A790DF7151B004A2689 = 10B35A790DF7151B004A2689 /* PBXTextBookmark */;
+			10B35AB60DF71AC3004A2689 = 10B35AB60DF71AC3004A2689 /* PBXTextBookmark */;
+			10CE0F480F668BA300D5D698 = 10CE0F480F668BA300D5D698 /* PBXTextBookmark */;
+			10CE0F490F668BA300D5D698 = 10CE0F490F668BA300D5D698 /* PBXTextBookmark */;
+			10CE0F520F668BD500D5D698 = 10CE0F520F668BD500D5D698 /* PBXTextBookmark */;
+			10CE0F7C0F6692CF00D5D698 = 10CE0F7C0F6692CF00D5D698 /* PBXTextBookmark */;
+			10CE0F7D0F6692CF00D5D698 = 10CE0F7D0F6692CF00D5D698 /* PBXTextBookmark */;
+			10CE0F7E0F6692CF00D5D698 = 10CE0F7E0F6692CF00D5D698 /* PBXTextBookmark */;
+			10CE0FFB0F67B8FB00D5D698 = 10CE0FFB0F67B8FB00D5D698 /* PBXTextBookmark */;
+			10CE0FFC0F67B8FB00D5D698 = 10CE0FFC0F67B8FB00D5D698 /* PBXTextBookmark */;
+			10CE10080F67BB0400D5D698 = 10CE10080F67BB0400D5D698 /* PBXTextBookmark */;
+			10CE100C0F67BB0600D5D698 = 10CE100C0F67BB0600D5D698 /* PBXTextBookmark */;
+			10E43D930F63BE6C003DDA5E = 10E43D930F63BE6C003DDA5E /* PBXTextBookmark */;
+			10E43D9A0F63BFDF003DDA5E = 10E43D9A0F63BFDF003DDA5E /* PBXTextBookmark */;
+			10E43DA60F63C2E2003DDA5E = 10E43DA60F63C2E2003DDA5E /* PBXTextBookmark */;
+			10E43DA70F63C2E2003DDA5E = 10E43DA70F63C2E2003DDA5E /* PBXTextBookmark */;
+			10E43DB50F63CE17003DDA5E = 10E43DB50F63CE17003DDA5E /* PBXTextBookmark */;
+			10E43DD90F64571F003DDA5E = 10E43DD90F64571F003DDA5E /* PBXTextBookmark */;
+			10E43DDC0F64571F003DDA5E = 10E43DDC0F64571F003DDA5E /* PBXTextBookmark */;
+			10FC5A380F5ECAEA00B4D809 = 10FC5A380F5ECAEA00B4D809 /* PBXTextBookmark */;
+			10FC5A500F5ED1B000B4D809 = 10FC5A500F5ED1B000B4D809 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 10B35A380DF70ADB004A2689 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	0A0DFDF50B94D28A00E4E714 /* java */ = {
+		isa = PBXFileReference;
+		explicitFileType = "compiled.mach-o.executable";
+		name = java;
+		path = /usr/bin/java;
+		sourceTree = "<absolute>";
+	};
+	0A8B99B20B8F56A4003CD01B /* build.xml */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {979, 3486}}";
+			sepNavSelRange = "{637, 0}";
+			sepNavVisRange = "{0, 1781}";
+		};
+	};
+	0A8B99D50B8F57BB003CD01B /* combinations_lib */ = {
+		activeExec = 0;
+	};
+	102439730EF10DD500574DA2 /* XlsReader.java */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.java;
+		name = XlsReader.java;
+		path = /Users/fjenett/Dev/Processing/Libraries/xlsreader/src/de/bezier/data/XlsReader.java;
+		sourceTree = "<absolute>";
+	};
+	105E68430EE1568F009A4983 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 10B35AA00DF71674004A2689 /* stylesheet.css */;
+		name = "stylesheet.css: 187";
+		rLen = 0;
+		rLoc = 1884;
+		rType = 0;
+		vrLen = 420;
+		vrLoc = 1716;
+	};
+	10B35A380DF70ADB004A2689 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	10B35A390DF70ADB004A2689 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	10B35A780DF7151B004A2689 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0A8B99B20B8F56A4003CD01B /* build.xml */;
+		name = "build.xml: 48";
+		rLen = 0;
+		rLoc = 2062;
+		rType = 0;
+		vrLen = 1177;
+		vrLoc = 957;
+	};
+	10B35A790DF7151B004A2689 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 10B35A7A0DF7151B004A2689 /* XlsReader.java */;
+		name = "XlsReader.java: 17";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 555;
+		vrLoc = 0;
+	};
+	10B35A7A0DF7151B004A2689 /* XlsReader.java */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.java;
+		name = XlsReader.java;
+		path = /Users/fjenett/Dev/Processing/Libraries/xlsreader/src/de/bezier/data/XlsReader.java;
+		sourceTree = "<absolute>";
+	};
+	10B35A9F0DF71674004A2689 /* index.html */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1272, 2114}}";
+			sepNavSelRange = "{4166, 0}";
+			sepNavVisRange = "{281, 1584}";
+			sepNavWindowFrame = "{{15, 151}, {905, 722}}";
+		};
+	};
+	10B35AA00DF71674004A2689 /* stylesheet.css */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {958, 2884}}";
+			sepNavSelRange = "{1884, 0}";
+			sepNavVisRange = "{1697, 312}";
+		};
+	};
+	10B35AB60DF71AC3004A2689 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 10B35A9F0DF71674004A2689 /* index.html */;
+		name = "index.html: 80";
+		rLen = 0;
+		rLoc = 2715;
+		rType = 0;
+		vrLen = 1228;
+		vrLoc = 2133;
+	};
+	10CE0F480F668BA300D5D698 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 10E43E400F65030A003DDA5E /* Permutation.java */;
+		name = "Permutation.java: 6";
+		rLen = 0;
+		rLoc = 96;
+		rType = 0;
+		vrLen = 1383;
+		vrLoc = 0;
+	};
+	10CE0F490F668BA300D5D698 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 10E43D7A0F63BDEC003DDA5E /* Combination.java */;
+		name = "Combination.java: 6";
+		rLen = 0;
+		rLoc = 130;
+		rType = 0;
+		vrLen = 1024;
+		vrLoc = 0;
+	};
+	10CE0F520F668BD500D5D698 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 10E43DEC0F64571F003DDA5E /* Variation.java */;
+		name = "Variation.java: 6";
+		rLen = 0;
+		rLoc = 118;
+		rType = 0;
+		vrLen = 1103;
+		vrLoc = 0;
+	};
+	10CE0F7C0F6692CF00D5D698 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 10E43DBF0F63CE17003DDA5E /* CombinatoricsBase.java */;
+		name = "CombinatoricsBase.java: 11";
+		rLen = 0;
+		rLoc = 286;
+		rType = 0;
+		vrLen = 1037;
+		vrLoc = 0;
+	};
+	10CE0F7D0F6692CF00D5D698 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 10E43D920F63BE6C003DDA5E /* CombinatoricsBaseSet.java */;
+		name = "CombinatoricsBaseSet.java: 84";
+		rLen = 0;
+		rLoc = 2085;
+		rType = 0;
+		vrLen = 1152;
+		vrLoc = 38;
+	};
+	10CE0F7E0F6692CF00D5D698 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 10E43DA50F63C2E2003DDA5E /* VariationSet.java */;
+		name = "VariationSet.java: 16";
+		rLen = 28;
+		rLoc = 445;
+		rType = 0;
+		vrLen = 1047;
+		vrLoc = 0;
+	};
+	10CE0FCD0F66DBB000D5D698 /* CombinationSet.java */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.java;
+		name = CombinationSet.java;
+		path = /Users/fjenett/Dev/Processing/Libraries/combinatorics/src/de/bezier/math/combinatorics/CombinationSet.java;
+		sourceTree = "<absolute>";
+	};
+	10CE0FFB0F67B8FB00D5D698 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 10CE0FCD0F66DBB000D5D698 /* CombinationSet.java */;
+		name = "CombinationSet.java: 72";
+		rLen = 0;
+		rLoc = 1989;
+		rType = 0;
+		vrLen = 1053;
+		vrLoc = 936;
+	};
+	10CE0FFC0F67B8FB00D5D698 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0A8B99B20B8F56A4003CD01B /* build.xml */;
+		name = "build.xml: 20";
+		rLen = 0;
+		rLoc = 637;
+		rType = 0;
+		vrLen = 1781;
+		vrLoc = 0;
+	};
+	10CE10080F67BB0400D5D698 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 10B35A9F0DF71674004A2689 /* index.html */;
+		name = "index.html: 118";
+		rLen = 0;
+		rLoc = 4166;
+		rType = 0;
+		vrLen = 1584;
+		vrLoc = 281;
+	};
+	10CE100C0F67BB0600D5D698 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 10B35A9F0DF71674004A2689 /* index.html */;
+		name = "index.html: 118";
+		rLen = 0;
+		rLoc = 4166;
+		rType = 0;
+		vrLen = 1584;
+		vrLoc = 281;
+	};
+	10E43D7A0F63BDEC003DDA5E /* Combination.java */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.java;
+		name = Combination.java;
+		path = /Users/fjenett/Dev/Processing/Libraries/combinatorics/src/de/bezier/math/combinatorics/Combination.java;
+		sourceTree = "<absolute>";
+	};
+	10E43D8F0F63BE6C003DDA5E /* CombinationSet.java */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.java;
+		name = CombinationSet.java;
+		path = /Users/fjenett/Dev/Processing/Libraries/combinatorics/src/de/bezier/math/combinatorics/CombinationSet.java;
+		sourceTree = "<absolute>";
+	};
+	10E43D920F63BE6C003DDA5E /* CombinatoricsBaseSet.java */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.java;
+		name = CombinatoricsBaseSet.java;
+		path = /Users/fjenett/Dev/Processing/Libraries/combinatorics/src/de/bezier/math/combinatorics/CombinatoricsBaseSet.java;
+		sourceTree = "<absolute>";
+	};
+	10E43D930F63BE6C003DDA5E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 10E43D7A0F63BDEC003DDA5E /* Combination.java */;
+		name = "Combination.java: 2";
+		rLen = 0;
+		rLoc = 38;
+		rType = 0;
+		vrLen = 441;
+		vrLoc = 0;
+	};
+	10E43D9A0F63BFDF003DDA5E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 10E43D920F63BE6C003DDA5E /* CombinatoricsBaseSet.java */;
+		name = "CombinatoricsBaseSet.java: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 396;
+		vrLoc = 0;
+	};
+	10E43DA50F63C2E2003DDA5E /* VariationSet.java */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.java;
+		name = VariationSet.java;
+		path = /Users/fjenett/Dev/Processing/Libraries/combinatorics/src/de/bezier/math/combinatorics/VariationSet.java;
+		sourceTree = "<absolute>";
+	};
+	10E43DA60F63C2E2003DDA5E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 10E43D8F0F63BE6C003DDA5E /* CombinationSet.java */;
+		name = "CombinationSet.java: 18";
+		rLen = 0;
+		rLoc = 1498;
+		rType = 0;
+		vrLen = 602;
+		vrLoc = 108;
+	};
+	10E43DA70F63C2E2003DDA5E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 10E43DA80F63C2E2003DDA5E /* VariationSet.java */;
+		name = "VariationSet.java: 18";
+		rLen = 0;
+		rLoc = 682;
+		rType = 0;
+		vrLen = 553;
+		vrLoc = 0;
+	};
+	10E43DA80F63C2E2003DDA5E /* VariationSet.java */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.java;
+		name = VariationSet.java;
+		path = /Users/fjenett/Dev/Processing/Libraries/combinatorics/src/de/bezier/math/combinatorics/VariationSet.java;
+		sourceTree = "<absolute>";
+	};
+	10E43DB50F63CE17003DDA5E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 10E43DB60F63CE17003DDA5E /* CombinatoricsBase.java */;
+		name = "CombinatoricsBase.java: 81";
+		rLen = 286;
+		rLoc = 3933;
+		rType = 0;
+		vrLen = 799;
+		vrLoc = 1575;
+	};
+	10E43DB60F63CE17003DDA5E /* CombinatoricsBase.java */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.java;
+		name = CombinatoricsBase.java;
+		path = /Users/fjenett/Dev/Processing/Libraries/combinatorics/src/de/bezier/math/combinatorics/CombinatoricsBase.java;
+		sourceTree = "<absolute>";
+	};
+	10E43DBF0F63CE17003DDA5E /* CombinatoricsBase.java */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.java;
+		name = CombinatoricsBase.java;
+		path = /Users/fjenett/Dev/Processing/Libraries/combinatorics/src/de/bezier/math/combinatorics/CombinatoricsBase.java;
+		sourceTree = "<absolute>";
+	};
+	10E43DD90F64571F003DDA5E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 10E43DDA0F64571F003DDA5E /* Variation.java */;
+		name = "Variation.java: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 874;
+		vrLoc = 163;
+	};
+	10E43DDA0F64571F003DDA5E /* Variation.java */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.java;
+		name = Variation.java;
+		path = /Users/fjenett/Dev/Processing/Libraries/combinatorics/src/de/bezier/math/combinatorics/Variation.java;
+		sourceTree = "<absolute>";
+	};
+	10E43DDC0F64571F003DDA5E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 10E43DDD0F64571F003DDA5E /* Permutation.java */;
+		name = "Permutation.java: 105";
+		rLen = 0;
+		rLoc = 2993;
+		rType = 0;
+		vrLen = 766;
+		vrLoc = 2218;
+	};
+	10E43DDD0F64571F003DDA5E /* Permutation.java */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.java;
+		name = Permutation.java;
+		path = /Users/fjenett/Dev/Processing/Libraries/combinatorics/src/de/bezier/math/combinatorics/Permutation.java;
+		sourceTree = "<absolute>";
+	};
+	10E43DEC0F64571F003DDA5E /* Variation.java */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.java;
+		name = Variation.java;
+		path = /Users/fjenett/Dev/Processing/Libraries/combinatorics/src/de/bezier/math/combinatorics/Variation.java;
+		sourceTree = "<absolute>";
+	};
+	10E43E400F65030A003DDA5E /* Permutation.java */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.java;
+		name = Permutation.java;
+		path = /Users/fjenett/Dev/Processing/Libraries/combinatorics/src/de/bezier/math/combinatorics/Permutation.java;
+		sourceTree = "<absolute>";
+	};
+	10FC5A380F5ECAEA00B4D809 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 102439730EF10DD500574DA2 /* XlsReader.java */;
+		name = "XlsReader.java: 444";
+		rLen = 0;
+		rLoc = 8861;
+		rType = 0;
+		vrLen = 939;
+		vrLoc = 12262;
+	};
+	10FC5A500F5ED1B000B4D809 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 10B35AA00DF71674004A2689 /* stylesheet.css */;
+		name = "stylesheet.css: 188";
+		rLen = 0;
+		rLoc = 1884;
+		rType = 0;
+		vrLen = 446;
+		vrLoc = 1697;
+	};
+	130F8B98001BDF0A11CA292A /* java */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+			YES,
+		);
+		argumentStrings = (
+			"-cp xlsreader2.jar xlsreader2",
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+			"PBXLSLaunchAction-0" = {
+				PBXLSLaunchAction = 0;
+				PBXLSLaunchStartAction = 1;
+				PBXLSLaunchStdioStyle = 2;
+				PBXLSLaunchStyle = 0;
+				class = PBXLSRunLaunchConfig;
+				commandLineArgs = (
+				);
+				displayName = "Executable Runner";
+				environment = {
+				};
+				identifier = com.apple.Xcode.launch.runConfig;
+				remoteHostInfo = "";
+				startActionInfo = "";
+			};
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = JavaDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		launchableReference = 0A0DFDF50B94D28A00E4E714 /* java */;
+		libgmallocEnabled = 0;
+		name = java;
+		sourceDirectories = (
+		);
+		startupPath = dist;
+	};
+}
