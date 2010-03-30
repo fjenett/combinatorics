@@ -4,6 +4,10 @@
 # ant-javac build directory
 bin/
 
+# build these yourself
+distribution/
+documentation/
+
 # XCode
 build/
 *.mode1
