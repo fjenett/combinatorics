@@ -1,0 +1,50 @@
+
+    =========================================
+     Combinatorics library for Processing
+    =========================================
+     http://bezier.de/processing/libs/combi/
+    =========================================
+    
+     This Processing library provides iterators for these
+     combinatorics sets:
+     
+     Ð Combinations
+     Ð CombinationSets
+     Ð Variations
+     Ð VariationSets
+     Ð Permutations
+     
+     The iterators provide arrays of indices (addresses) into
+     an imaginary array of a given length at each step. These
+     adresses can then be used on any kind of real array.
+     
+     
+     Say you have a String array:
+     
+     { "A", "B", "C" }
+     
+     ... and you'd like to find all possible combinations at any length.
+     A CombinationSet could return these indice arrays:
+     
+     []                       empty (0 elements)
+     [0], [1], [2]            combinations of 1 element
+     [0, 1], [0, 2], [1, 2]   combinations of 2 elements
+     [0, 1, 2]                combinations of 3 elements
+     
+     Using these indices to read from your array would give you:
+     
+     (null)
+     ["A"], ["B"], ["C"]
+     ["A", "B"], ["A", "C"], ["B", "C"]
+     ["A", "B", "C"]
+     
+     
+     A quick overview:
+     
+     class Combination      unique combinations, no duplications, order is ignored
+     class CombinationSet   range of combinations at different lengths
+     class Variation        all possible variations, includes duplication, order matters
+     class VariationSet     range of variations at different lengths
+     class Permutation      all possible ways to order the elements, no duplications
+     
+     
