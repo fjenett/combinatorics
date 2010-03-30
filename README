@@ -8,11 +8,11 @@
      This Processing library provides iterators for these
      combinatorics sets:
      
-     Ð Combinations
-     Ð CombinationSets
-     Ð Variations
-     Ð VariationSets
-     Ð Permutations
+     â€“ Combinations
+     â€“ CombinationSets
+     â€“ Variations
+     â€“ VariationSets
+     â€“ Permutations
      
      The iterators provide arrays of indices (addresses) into
      an imaginary array of a given length at each step. These
