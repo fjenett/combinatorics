@@ -1,65 +1,64 @@
 
-    ==================================================================================
-     
-	 Combinatorics library for Processing 
-
-	 This library provides an easy way to generate combinations, variations and 
-	 permutations from a given set of values.
-
-    ----------------------------------------------------------------------------------
-	 Written by Florian Jenett for the course "Zeichen, Spiel, System" 
-	 taught by Philipp Pape at Fachhochschule Mainz, Germany, in summer 2009
-    ----------------------------------------------------------------------------------
-     Tested on OS-X, but should work on any other
-    ----------------------------------------------------------------------------------
-     Updated for Processing 2.x
-    ---------------------------------------------------------------------------------- 
-     Latest release is 0.0.6, updated 2011-08
-	 A zip containing documentation and examples is available here:
-	 
-    ==================================================================================
+==================================================================================
     
-	 What?
-	
-     Combinatorics library provides iterators for these combinatorics sets:
-     
-     – Combinations
-     – CombinationSets
-     – Variations
-     – VariationSets
-     – Permutations
-     
-     The iterators provide arrays of indices (addresses) into an imaginary 
-	 array of a given length at each step. These adresses can then be used 
-	 on any kind of real array.
-     
-     Say you have a String array:
-     
-     { "A", "B", "C" }
-     
-     ... and you'd like to find all possible combinations at any length.
-     A CombinationSet would return these indice arrays:
-     
-     []                       empty (0 elements)
-     [0], [1], [2]            combinations of 1 element
-     [0, 1], [0, 2], [1, 2]   combinations of 2 elements
-     [0, 1, 2]                combinations of 3 elements
-     
-     Using these indices to read from your array would give you:
-     
-     (null)
-     ["A"], ["B"], ["C"]
-     ["A", "B"], ["A", "C"], ["B", "C"]
-     ["A", "B", "C"]
-     
-    ----------------------------------------------------------------------------------
-     
-     A quick overview:
-     
-     class Combination      unique combinations, no duplications, order is ignored
-     class CombinationSet   range of combinations at different lengths
-     class Variation        all possible variations, includes duplication, order matters
-     class VariationSet     range of variations at different lengths
-     class Permutation      all possible ways to order the elements, no duplications
-     
-     
+ Combinatorics library for the Processings
+
+ This library provides an easy way to generate combinations, variations and 
+ permutations from a given set of values.
+
+----------------------------------------------------------------------------------
+ Written by Florian Jenett for the class "Zeichen, Spiel, System" 
+ taught by Philipp Pape at Fachhochschule Mainz, Germany, in summer 2009
+----------------------------------------------------------------------------------
+ Tested on OS-X, but should work on any other
+----------------------------------------------------------------------------------
+ Updated for Processing 2.x
+---------------------------------------------------------------------------------- 
+ Latest release was 0.0.6
+ Next release will be compatible with JavaScript mode in Processing 2.0
+==================================================================================
+
+ What?
+
+ Combinatorics library provides iterators for these combinatorics sets:
+    
+ – Combinations
+ – CombinationSets
+ – Variations
+ – VariationSets
+ – Permutations
+    
+ The iterators provide arrays of indices (addresses) into an imaginary 
+ array of a given length at each step. These adresses can then be used 
+ on any kind of real array.
+    
+ Say you have a String array:
+ 
+ { "A", "B", "C" }
+ 
+ ... and you'd like to find all possible combinations at any length.
+ A CombinationSet would return these indice arrays:
+ 
+ []                       empty (0 elements)
+ [0], [1], [2]            combinations of 1 element
+ [0, 1], [0, 2], [1, 2]   combinations of 2 elements
+ [0, 1, 2]                combinations of 3 elements
+ 
+ Using these indices to read from your array would give you:
+ 
+ (null)
+ ["A"], ["B"], ["C"]
+ ["A", "B"], ["A", "C"], ["B", "C"]
+ ["A", "B", "C"]
+    
+----------------------------------------------------------------------------------
+ 
+ A quick overview:
+ 
+ class Combination      unique combinations, no duplications, order is ignored
+ class CombinationSet   range of combinations at different lengths
+ class Variation        all possible variations, includes duplication, order matters
+ class VariationSet     range of variations at different lengths
+ class Permutation      all possible ways to order the elements, no duplications
+   
+    
