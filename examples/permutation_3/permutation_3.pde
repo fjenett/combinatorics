@@ -43,7 +43,7 @@ void draw ()
         for ( int j = 0; j < p.length; j++ )
         {
             fill( farben[ p[j] ] );
-            rect( (j%3)*w, (j/3)*w, w, w );
+            rect( (j%3)*w, int(j/3)*w, w, w );
         } 
     }
 }

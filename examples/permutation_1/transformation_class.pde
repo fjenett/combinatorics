@@ -16,16 +16,6 @@ class Transformation
  
     // contructors, these get called by "new Transformation(..)"
     
-    Transformation ( int _type, float _value )
-    {
-        this( _type, new float[]{_value} );
-    }
-    
-    Transformation ( int _type, float _valuex, float _valuey )
-    {
-        this( _type, new float[]{_valuex,_valuey} );
-    }
- 
     Transformation ( int _type, float[] _values )
     {
         type = _type; values = _values;

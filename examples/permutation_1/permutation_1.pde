@@ -35,13 +35,13 @@ void setup ()
     // be carefull when adding more elements ... 
     // it will increase the time needed to generate the permutations quite a bit!
     transforms = new Transformation[] {
-        new Transformation( Transformation.SCALE,  2/4.0 ),
-        new Transformation( Transformation.SCALE, -2/4.0 ),
-        new Transformation( Transformation.ROTATE,  HALF_PI/2 ),
-        new Transformation( Transformation.ROTATE, -HALF_PI/2 ),
-        new Transformation( Transformation.TRANSLATE, 0, blockSize ),
-        new Transformation( Transformation.TRANSLATE, blockSize, blockSize ),
-        new Transformation( Transformation.TRANSLATE, blockSize, 0 )
+        new Transformation( Transformation.SCALE,     new float[]{  2/4.0               }),
+        new Transformation( Transformation.SCALE,     new float[]{ -2/4.0               }),
+        new Transformation( Transformation.ROTATE,    new float[]{  HALF_PI/2           }),
+        new Transformation( Transformation.ROTATE,    new float[]{ -HALF_PI/2           }),
+        new Transformation( Transformation.TRANSLATE, new float[]{ 0, blockSize         }),
+        new Transformation( Transformation.TRANSLATE, new float[]{ blockSize, blockSize }),
+        new Transformation( Transformation.TRANSLATE, new float[]{ blockSize, 0         })
     };
     
     permutations = new Permutation( transforms.length );
@@ -89,7 +89,7 @@ void drawCounter ()
     fill( 255 );
     text(       permutations.position()           +
           "/" + permutations.total()              + " " + 
-          "(" + permutations.positionInPercent(2) + "%)", 
+          "(" + permutations.positionInPercent() + "%)", 
           5, 15 );
     
     popStyle();   

@@ -105,6 +105,7 @@
 				<file name="CombinatoricsBaseSet.js" />
 				<file name="Variation.js" />
 				<file name="VariationSet.js" />
+				<file name="Permutation.js" />
 			</filelist>
 		</concat>
 		

@@ -23,7 +23,7 @@ var CombinatoricsBase = (function(){
 		
 		if ( precision ) {
 			var scale = Math.pow( 10, precision );
-			percent = parseInt(percent * scale) / scale;
+			percent = parseInt( scale * percent ) / scale;
 		}
 		
 		return percent;
@@ -46,10 +46,12 @@ var CombinatoricsBase = (function(){
 	CombinatoricsBase.prototype.totalAsInt = CombinatoricsBase.prototype.total;
 	CombinatoricsBase.prototype.totalAsLong = CombinatoricsBase.prototype.total;
 	
+	/* abstract */
 	CombinatoricsBase.prototype.rewind = function () {}
 	CombinatoricsBase.prototype.hasMore = function () {}
 	CombinatoricsBase.prototype.next = function () {}
 	
+	/* int[] */
 	CombinatoricsBase.prototype.nextAndStep = function ( step ) {
 		
 		var nextResult = this.next();
@@ -70,6 +72,19 @@ var CombinatoricsBase = (function(){
 	
 	CombinatoricsBase.prototype.decrease = function () {
 		this.current--;
+	}
+	
+	/* BigInteger */
+	CombinatoricsBase.prototype.factorial = function ( n )
+	{
+		var r = 1;
+		var ii = 1;
+		for ( var i = 1; i <= n; i++ )
+		{
+			r = r * ii;
+			ii = ii + 1;
+		}
+		return r;
 	}
 	
 	return CombinatoricsBase;

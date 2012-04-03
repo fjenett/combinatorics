@@ -1,6 +1,4 @@
 /**
- *    
- *
  *    fjenett 20090306
  */
 
@@ -31,10 +29,11 @@ void draw ()
     if ( permutation.hasMore() )
     {
         int[] p = permutation.nextAndStep( 1000000 ); // a biiiig step, still not gettin' much further
+        
         for ( int j = 0; j < p.length; j++ )
         {
             pushMatrix();
-                translate( (j%perRow)*(2*w2), (j/perRow)*(2*w2) );
+                translate( (j%perRow)*(2*w2), int(j/perRow)*(2*w2) );
                 int r = p[j] % 4;
                 fill( map(p[j], 0, p.length, 0, 100), 
                       map(p[j], 0, p.length, 50, 200), 
