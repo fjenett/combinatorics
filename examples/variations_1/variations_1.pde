@@ -7,21 +7,22 @@
 
 import de.bezier.math.combinatorics.*;
 
-char chars[] = "abc".toCharArray();
-
-for ( int l = 1; l <= chars.length; l++ )
+void setup ()
 {
-    Variation variation = new Variation( chars.length, l );
+    char chars[] = "abc".toCharArray();
     
-    while ( variation.hasMore() )
+    for ( int l = 1; l <= chars.length; l++ )
     {
-        int[] v = variation.next();
-        for ( int i = 0; i < v.length; i++ )
+        Variation variation = new Variation( chars.length, l );
+        
+        while ( variation.hasMore() )
         {
-            print( chars[ v[i] ] );   
+            int[] v = variation.next();
+            for ( int i = 0; i < v.length; i++ )
+            {
+                print( chars[ v[i] ] );
+            }
+            println();
         }
-        println();
     }
 }
-
-exit();

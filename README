@@ -1,12 +1,27 @@
 
-    =========================================
-     Combinatorics library for Processing
-    =========================================
-     http://bezier.de/processing/libs/combi/
-    =========================================
+    ==================================================================================
+     
+	 Combinatorics library for Processing 
+
+	 This library provides an easy way to generate combinations, variations and 
+	 permutations from a given set of values.
+
+    ----------------------------------------------------------------------------------
+	 Written by Florian Jenett for the course "Zeichen, Spiel, System" 
+	 taught by Philipp Pape at Fachhochschule Mainz, Germany, in summer 2009
+    ----------------------------------------------------------------------------------
+     Tested on OS-X, but should work on any other
+    ----------------------------------------------------------------------------------
+     Updated for Processing 2.x
+    ---------------------------------------------------------------------------------- 
+     Latest release is 0.0.6, updated 2011-08
+	 A zip containing documentation and examples is available here:
+	 
+    ==================================================================================
     
-     This Processing library provides iterators for these
-     combinatorics sets:
+	 What?
+	
+     Combinatorics library provides iterators for these combinatorics sets:
      
      – Combinations
      – CombinationSets
@@ -14,17 +29,16 @@
      – VariationSets
      – Permutations
      
-     The iterators provide arrays of indices (addresses) into
-     an imaginary array of a given length at each step. These
-     adresses can then be used on any kind of real array.
-     
+     The iterators provide arrays of indices (addresses) into an imaginary 
+	 array of a given length at each step. These adresses can then be used 
+	 on any kind of real array.
      
      Say you have a String array:
      
      { "A", "B", "C" }
      
      ... and you'd like to find all possible combinations at any length.
-     A CombinationSet could return these indice arrays:
+     A CombinationSet would return these indice arrays:
      
      []                       empty (0 elements)
      [0], [1], [2]            combinations of 1 element
@@ -38,6 +52,7 @@
      ["A", "B"], ["A", "C"], ["B", "C"]
      ["A", "B", "C"]
      
+    ----------------------------------------------------------------------------------
      
      A quick overview:
      

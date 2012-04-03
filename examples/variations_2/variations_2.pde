@@ -27,6 +27,7 @@ void setup ()
     background( 255 );
     noStroke();
     smooth();
+    
 }
 
 void draw ()

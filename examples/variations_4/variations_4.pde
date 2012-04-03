@@ -1,5 +1,5 @@
 /**
- *    Testing variations of colors. Few colors, many variations.
+ *    Testing variations of segments ..
  *
  *    fjenett 20090306
  */

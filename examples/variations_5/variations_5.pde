@@ -10,27 +10,6 @@ Segment segmente[];
 Variation variations;
 int l = 0;
 
-class Segment
-{
-    float points[]; // [x,y, x2,y2, x3,y3, ...]
-
-    Segment ( float pnts[] )
-    {
-        points = pnts;
-    }
-    
-    void draw ()
-    {
-        beginShape();
-            for (int i = 0; i < points.length; i+=2)
-            {
-                vertex( points[i], points[i+1] );
-            }
-        endShape();
-        translate( points[points.length-2], points[points.length-1] );
-    }
-}
-
 void setup ()
 {
     size( 400, 400 );
@@ -67,8 +46,10 @@ void draw ()
     }
     
     int[] c = variations.next();
+
     for ( int i = 0; i < c.length; i++ )
     {
         segmente[ c[i] ].draw();
     }
+
 }
