@@ -70,7 +70,7 @@
 	 + + + + + + + + + + + + + + + + + + + + + + + + + + + + -->
 	<target name="init" depends="settings">
 			
-		<buildnumber file="lib/build.number"/>
+		<buildnumber file="resources/build.number"/>
 
 		<tstamp> <!-- Create the time stamp -->
 			<format property="date" pattern="MM/dd/yyyy" offset="0" unit="hour"/>
@@ -137,6 +137,10 @@
 			<fileset file="resources/library.properties" />
 			<fileset file="README" />
 		</copy>
+		<replaceregexp file="${dist}/library.properties" flags="g"
+  					   match="@@VERSION@@" replace="${build.number}" />
+		<replaceregexp file="${dist}/library.properties" flags="g"
+  					   match="@@PRETTYVERSION@@" replace="${versionNumber}" />
 
 	</target>
   	
@@ -190,6 +194,13 @@
 	  	     basedir="${dist}"
 	  	     excludes="**/_DS.Store"
 		/>
+		
+		<copy tofile="releases/${libraryName}.zip">
+			<fileset file="releases/${libraryName}-${versionNumber}.zip" />
+		</copy>
+		<copy tofile="releases/${libraryName}.txt">
+			<fileset file="${dist}/library.properties" />
+		</copy>
 		
 		<!-- <upload user="${github.user}" 
 				repo="combinatorics" 
