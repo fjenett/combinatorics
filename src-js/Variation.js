@@ -2,27 +2,25 @@ var Variation = (function(){
 	
 	var Variation = function () {
 		
-		if ( arguments.length > 0 ) {
-			this.elements = parseInt(arguments[0]);
-		}
-		if ( arguments.length > 1 ) {
-			this.length = parseInt(arguments[1]);
-		}
+		this.elements = arguments[0];// || throw "Variation.elements can not be null";
+		this.length = arguments[1];// || throw "Variation.length can not be null";
 		
-		this.totalResults = Math.pow( this.elements, this.length );
+		this.bigElements = BigInteger( this.elements );
+		this.totalResults = this.bigElements.pow( this.length );
 		
 		this.rewind();
 		
 		this.deviders = new Array( this.length );
-		for ( var i = 0; i < this.length; i++ )
-			this.deviders[this.length-1-i] = Math.pow(this.elements, i+1) / this.elements;
+		for ( var i = 0; i < this.length; i++ ) {
+			this.deviders[this.length-1-i] = this.bigElements.pow(i+1).divide(this.bigElements);
+		}
 	}
 	Variation.prototype = new CombinatoricsBase();
 	Variation.prototype.constructor = Variation;
 	
 	Variation.prototype.rewind = function ()
 	{
-		this.current = 0;
+		this.current = BigInteger( BigInteger.ZERO );
 		
 		this.indices = new Array( this.length );
 		
@@ -32,23 +30,24 @@ var Variation = (function(){
 	
 	Variation.prototype.hasMore = function ()
 	{
-		return this.current < this.totalResults;
+		var i = this.current.compare( this.totalResults );
+		return i < 0;
 	}
 	
 	Variation.prototype.next = function ()
 	{
-		if ( this.current == 0 )
+		if ( this.current.compare(BigInteger.ZERO) == 0 )
 		{
 			this.increase();
 			return this.indices.slice(0); // clone
 		}
 		
-		if ( this.current == this.totalResults )
+		if ( this.current.compare(this.totalResults) == 0 )
 			return this.indices.slice(0); // clone
 		
 		for ( var k = this.length-1; k >= 0; k-- )
 		{
-			this.indices[k] = parseInt( parseInt(this.current / this.deviders[k]) % this.elements );
+			this.indices[k] = parseInt( this.current.divide( this.deviders[k] ).remainder( this.bigElements ).valueOf() );
 		}
 		
 		this.increase();

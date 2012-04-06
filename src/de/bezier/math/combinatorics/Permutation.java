@@ -40,7 +40,7 @@ extends CombinatoricsBase
 		}
 		
 		this.elements = elements;
-		this.length = length;
+		//this.length = length;
 		
 		totalResults = factorial( elements );
 		

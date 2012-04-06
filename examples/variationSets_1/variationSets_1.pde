@@ -14,7 +14,6 @@ vset = new VariationSet(4,1,4); // 4 elements, return lengths 2 - 3
 while ( vset.hasMore() )
 {
     int c[] = vset.next();
-    console.log( c );
     for ( int p = 0; p < c.length; p++ )
     {
         print( abc[ c[p] ] );

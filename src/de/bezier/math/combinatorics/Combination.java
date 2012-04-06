@@ -139,12 +139,12 @@ extends CombinatoricsBase
 	 */
 	public int[] next ()
 	{
-		if ( current.equals(BigInteger.ZERO) ) // == 0
+		if ( current.equals( BigInteger.ZERO ) ) // == 0
 		{
 			increase();
 			return cloneIntArray(indices);
 		}
-		if ( current == totalResults )
+		if ( current.equals( totalResults ) )
 			return cloneIntArray(indices);
 		
 		for ( int n = indices.length-1; n >= 0; n-- )

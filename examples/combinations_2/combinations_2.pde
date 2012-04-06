@@ -1,6 +1,6 @@
 /**
  *    Hallo norm.to.
- *    http://www.norm.to/pages/generator_3.html
+ *    http://lineto.com/The+Designers/Norm/Sign-Generator/Software/Sign-Generator+1.0/
  *
  *    Click inside window to speed things up a little ..
  *
@@ -26,7 +26,7 @@ void setup ()
     // find all possible connections (lines) between our number of spots
     Combination cc = new Combination( spotsSq, 2); // 2 points are a connection, spots ^ 2 to connect
     
-    connections = new int[cc.totalAsInt()][2];
+    connections = new int[ cc.totalAsInt() ][2];
     
     int c = 0; while ( cc.hasMore() )
     {
@@ -51,7 +51,7 @@ void draw ()
     
     noStroke();
     for ( int i = 0; i < spotsSq; i++ )
-        ellipse( w32 + (i%spots) * w3, w32 + (i/spots) * w3, 4, 4 );
+        ellipse( w32 + int(i%spots) * w3, w32 + int(i/spots) * w3, 4, 4 );
     
     if ( !combinations.hasMore() )
         combinations.rewind();
@@ -64,8 +64,8 @@ void draw ()
         int cc[] = connections[c[i]];
         for ( int ii = 0; ii < cc.length; ii+=2 )
         {
-            line( w32 + (cc[ii  ]%spots) * w3, w32 + (cc[ii  ]/spots) * w3, 
-                  w32 + (cc[ii+1]%spots) * w3, w32 + (cc[ii+1]/spots) * w3 );
+            line( w32 + int(cc[ii  ]%spots) * w3, w32 + int(cc[ii  ]/spots) * w3, 
+                  w32 + int(cc[ii+1]%spots) * w3, w32 + int(cc[ii+1]/spots) * w3 );
         }
     }
 }

@@ -99,18 +99,24 @@
 		<mkdir dir="${dist}/documentation" />
 		
 		<concat destfile="${bin}/${libraryName}.js">
+			<!-- this list is sorted! -->
 			<filelist dir="src-js">
-				<!-- <file name="biginteger.js" />-->
+				<file name="biginteger.js" />
 				<file name="CombinatoricsBase.js" />
 				<file name="CombinatoricsBaseSet.js" />
 				<file name="Variation.js" />
 				<file name="VariationSet.js" />
 				<file name="Permutation.js" />
+				<file name="Combination.js" />
+				<file name="CombinationSet.js" />
 			</filelist>
 		</concat>
 		
-		<jscomp compilationLevel="simple" warning="default" 
-		        debug="false" output="${dist}/library/${libraryName}.js">
+		<jscomp compilationLevel="simple" 
+				warning="default" 
+		        debug="false" 
+				output="${dist}/library/${libraryName}.js"
+				prettyprint="true" >
 			<sources dir="${bin}">
 				<file name="${libraryName}.js" />
 			</sources>

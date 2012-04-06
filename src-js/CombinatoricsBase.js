@@ -4,35 +4,36 @@ var CombinatoricsBase = (function(){
 		
 		/* int */ 		 this.elements = arguments[0] || NaN;
 		/* int */ 		 this.length = arguments[1] || NaN;
-		/* BigInteger */ this.totalResults = NaN;
-		/* BigInteger */ this.current = NaN;
+		/* BigInteger */ this.totalResults = undefined;
+		/* BigInteger */ this.current = undefined;
 		/* int[] */ 	 this.indices = [];
 		
 	}
 	
 	/* int */ 
 	CombinatoricsBase.prototype.numberOfElements = function () {
-		return this.elements.valueOf();
+		return this.elements;
 	}
 	
 	/* float */ 
 	CombinatoricsBase.prototype.positionInPercent = function ()
 	{
 		var precision = arguments[0] || false;
-		var percent = this.current / this.totalResults;
+		var percent = this.current.divide( this.totalResults );
 		
-		if ( precision ) {
-			var scale = Math.pow( 10, precision );
-			percent = parseInt( scale * percent ) / scale;
-		}
+		// TODO
+		// if ( precision ) {
+		// 	var scale = Math.pow( 10, precision );
+		// 	percent = percent.multiply( scale ) / scale;
+		// }
 		
-		return percent;
+		return percent.multiply( 100 ).valueOf();
 	}
 	
 	/* int */
 	CombinatoricsBase.prototype.position = function ()
 	{
-		return this.current.valueOf;
+		return this.current.valueOf();
 	}
 	
 	CombinatoricsBase.prototype.positionAsInt = CombinatoricsBase.prototype.position;
@@ -40,11 +41,13 @@ var CombinatoricsBase = (function(){
 	
 	CombinatoricsBase.prototype.total = function ()
 	{
-		return this.totalResults;
+		return BigInteger( this.totalResults );
 	}
 	
-	CombinatoricsBase.prototype.totalAsInt = CombinatoricsBase.prototype.total;
-	CombinatoricsBase.prototype.totalAsLong = CombinatoricsBase.prototype.total;
+	CombinatoricsBase.prototype.totalAsInt = function () {
+		return CombinatoricsBase.prototype.total().valueOf();
+	}
+	CombinatoricsBase.prototype.totalAsLong = CombinatoricsBase.prototype.totalAsInt;
 	
 	/* abstract */
 	CombinatoricsBase.prototype.rewind = function () {}
@@ -67,22 +70,22 @@ var CombinatoricsBase = (function(){
 	}
 	
 	CombinatoricsBase.prototype.increase = function () {
-		this.current++;
+		this.current = this.current.add( BigInteger.ONE );
 	}
 	
 	CombinatoricsBase.prototype.decrease = function () {
-		this.current--;
+		this.current = this.current.subtract( BigInteger.ONE );
 	}
 	
 	/* BigInteger */
 	CombinatoricsBase.prototype.factorial = function ( n )
 	{
-		var r = 1;
-		var ii = 1;
+		var r = BigInteger.ONE;
+		var ii = BigInteger.ONE;
 		for ( var i = 1; i <= n; i++ )
 		{
-			r = r * ii;
-			ii = ii + 1;
+			r = r.multiply( ii );
+			ii = ii.add( BigInteger.ONE );
 		}
 		return r;
 	}

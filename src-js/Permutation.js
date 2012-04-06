@@ -2,8 +2,8 @@ var Permutation = (function(){
 	
 	var Permutation = function () {
 		
-		this.elements = arguments[0];
-		this.length = length;
+		this.elements = arguments[0];// || throw "Permutation.elements can not be null";
+		//this.length = arguments[1] || alert( 'Permutation.length can not be null' );
 		
 		this.totalResults = this.factorial( this.elements );
 		
@@ -24,16 +24,16 @@ var Permutation = (function(){
 	
 	/* boolean */
 	Permutation.prototype.hasMore = function () {
-		return this.current > 0;
+		return this.current.compare(BigInteger.ZERO) > 0;
 	}
 
 	/* int[] */
 	Permutation.prototype.next = function () {
 		
-		if ( this.current == 0 ) 
+		if ( this.current.compare(BigInteger.ZERO) == 0 ) 
 			return this.indices.slice(0); // clone
 			
-		if ( this.current == this.totalResults )
+		if ( this.current.compare(this.totalResults) == 0 )
 		{
 			this.decrease();
 			return this.indices.slice(0); // clone
@@ -78,7 +78,7 @@ var Permutation = (function(){
 	/* float */
 	Permutation.prototype.positionInPercent = function () {
 		
-		return 100 * (1 - CombinatoricsBase.prototype.positionInPercent.call( this )); // super.positionInPercent()
+		return 100 - CombinatoricsBase.prototype.positionInPercent.call( this ); // super.positionInPercent()
 	}
 	
 	/* int */
@@ -102,7 +102,7 @@ var Permutation = (function(){
 	/* BigInteger */ 
 	Permutation.prototype.getPosition = function () {
 		
-		return parseInt( this.totalResults - this.current );
+		return parseInt( this.totalResults.subtract( this.current ) );
 	}
 	
 	return Permutation;
