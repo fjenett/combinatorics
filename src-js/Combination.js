@@ -3,7 +3,9 @@ var Combination = (function(){
 	var Combination = function () {
 		
 		this.elements = arguments[0];// || throw "Combination.elements can not be null";
-		this.length = arguments[1] || this.elements; //alert( 'Combination.length can not be null' );
+		this.length = this.elements;
+		if ( arguments.length > 1 ) 
+			this.length = arguments[1];
 		
 		if ( this.length == 0 )
 			this.totalResults = BigInteger( BigInteger.ZERO );
@@ -25,7 +27,7 @@ var Combination = (function(){
 		this.current = BigInteger( BigInteger.ZERO );
 		
 		this.indices = new Array( this.length );
-		for ( var i = 0; i < this.indices.length; i++ )
+		for ( var i = 0, k = this.indices.length; i < k; i++ )
 			this.indices[i] = i;
 	}
 	

@@ -18,7 +18,7 @@ var Permutation = (function(){
 		this.current = this.totalResults;
 		
 		this.indices = new Array( this.elements );
-		for ( var i = 0; i < this.indices.length; i++ )
+		for ( var i = 0, k = this.indices.length; i < k; i++ )
 			this.indices[i] = i;
 	}
 	
@@ -96,13 +96,13 @@ var Permutation = (function(){
 	/* BigInteger */ 
 	Permutation.prototype.position = function () {
 		
-		return parseInt( this.getPosition() );
+		return this.getPosition();
 	}
 	
 	/* BigInteger */ 
 	Permutation.prototype.getPosition = function () {
 		
-		return parseInt( this.totalResults.subtract( this.current ) );
+		return this.totalResults.subtract( this.current );
 	}
 	
 	return Permutation;

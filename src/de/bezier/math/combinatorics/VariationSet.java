@@ -23,7 +23,7 @@ extends CombinatoricsBaseSet
 		current = BigInteger.ZERO;
 		totalResults = BigInteger.ZERO;
 		Variation v[] = new Variation[to-from+1];
-		for ( int i = 0; i <= (to-from); i++ )
+		for ( int i = from; i <= to; i++ )
 		{
 			v[i] = new Variation(elements, i);
 			totalResults = 

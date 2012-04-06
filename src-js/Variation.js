@@ -11,7 +11,7 @@ var Variation = (function(){
 		this.rewind();
 		
 		this.deviders = new Array( this.length );
-		for ( var i = 0; i < this.length; i++ ) {
+		for ( var i = 0, k = this.length; i < k; i++ ) {
 			this.deviders[this.length-1-i] = this.bigElements.pow(i+1).divide(this.bigElements);
 		}
 	}
@@ -24,7 +24,7 @@ var Variation = (function(){
 		
 		this.indices = new Array( this.length );
 		
-		for ( var k = 0; k < this.length; k++ )
+		for ( var k = 0, n = this.length; k < n; k++ )
 			this.indices[k] = 0;
 	}
 	

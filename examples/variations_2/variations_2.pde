@@ -35,7 +35,7 @@ void draw ()
     // internal clock was updated
     if ( lastSec != second() )
     {
-        background( 100 );
+        background( 255 );
     
         int[] v = clockwork.next();
         

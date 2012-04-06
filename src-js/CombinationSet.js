@@ -12,7 +12,7 @@ var CombinationSet = (function(){
 		this.totalResults = BigInteger( BigInteger.ZERO );
 		
 		var c = new Array( this.to-this.from+1 );
-		for ( var i = 0; i <= (this.to-this.from); i++ )
+		for ( var i = this.from, k = this.to; i <= k; i++ )
 		{
 			c[i] = new Combination( this.elements, i );
 			this.totalResults = 

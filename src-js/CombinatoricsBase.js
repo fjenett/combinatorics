@@ -19,7 +19,7 @@ var CombinatoricsBase = (function(){
 	CombinatoricsBase.prototype.positionInPercent = function ()
 	{
 		var precision = arguments[0] || false;
-		var percent = this.current.divide( this.totalResults );
+		var percent = this.current.valueOf() / this.totalResults.valueOf();
 		
 		// TODO
 		// if ( precision ) {
@@ -27,7 +27,7 @@ var CombinatoricsBase = (function(){
 		// 	percent = percent.multiply( scale ) / scale;
 		// }
 		
-		return percent.multiply( 100 ).valueOf();
+		return percent * 100.0;
 	}
 	
 	/* int */
@@ -45,7 +45,7 @@ var CombinatoricsBase = (function(){
 	}
 	
 	CombinatoricsBase.prototype.totalAsInt = function () {
-		return CombinatoricsBase.prototype.total().valueOf();
+		return this.total().valueOf();
 	}
 	CombinatoricsBase.prototype.totalAsLong = CombinatoricsBase.prototype.totalAsInt;
 	

@@ -48,7 +48,7 @@ extends CombinatoricsBaseSet
 		
 		// calc total results
 		Combination c[] = new Combination[to-from+1];
-		for ( int i = 0; i <= (to-from); i++ )
+		for ( int i = from; i <= to; i++ )
 		{
 			c[i] = new Combination(elements, i);
 			totalResults = 

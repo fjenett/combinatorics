@@ -38,7 +38,6 @@ void setup ()
     combinations = new Combination( connections.length, 4 );
     
     strokeWeight( 20 );
-    strokeCap( PROJECT ); // uncomment if you don't like the edge overlaps
     smooth();
     fill(0);
     

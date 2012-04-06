@@ -21,7 +21,7 @@
 		<property name="author" 		value="Florian Jenett"/>
 		<property name="copyright" 		value="(c) 2009-2012"/>
 		<property name="libraryName"  	value="Combinatorics"/>
-		<property name="versionNumber"  value="0.0.7"/>
+		<property name="versionNumber"  value="0.0.8"/>
 		<property name="libManagerNumber"  
 										value="1"/>
 		<property name="yourLink"  		value="http://bezier.de/" />
@@ -52,7 +52,7 @@
 		           			   classpath="${resources}closure-compiler/compiler.jar"/>
 		
 		<!-- GITHUB upload -->
-		<property file="${resources}github.properties" />
+		<!-- <property file="${resources}github.properties" />
 		<path id="githubhuploadtask.classpath">
 			<pathelement location="."/>
 			<fileset dir="${resources}">
@@ -62,7 +62,7 @@
 		<taskdef name="upload" 
 				 classname="no.kinsey.ant.GitHubUploadTask" 
 				 classpathref="githubhuploadtask.classpath" 
-				 loaderref="githubhuploadtask.classpath.loader" />
+				 loaderref="githubhuploadtask.classpath.loader" /> -->
 	</target>
 	
 	<!-- + + + + + + + + + + + + + + + + + + + + + + + + + + + +
