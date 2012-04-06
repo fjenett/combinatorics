@@ -7,20 +7,14 @@
  permutations from a given set of values.
 
 ----------------------------------------------------------------------------------
- Written by Florian Jenett for the class "Zeichen, Spiel, System" 
- taught by Philipp Pape at Fachhochschule Mainz, Germany, in summer 2009
-----------------------------------------------------------------------------------
- Tested on OS-X, but should work on any other
-----------------------------------------------------------------------------------
- Updated for Processing 2.x
----------------------------------------------------------------------------------- 
- Latest release was 0.0.6
- Next release will be compatible with JavaScript mode in Processing 2.0
+ 
+ Current release is now compatible with JavaScript mode in Processing 2.0
+
 ==================================================================================
 
  What?
 
- Combinatorics library provides iterators for these combinatorics sets:
+ Combinatorics library provides iterators for these combinatorical sets:
     
  – Combinations
  – CombinationSets
@@ -30,7 +24,7 @@
     
  The iterators provide arrays of indices (addresses) into an imaginary 
  array of a given length at each step. These adresses can then be used 
- on any kind of real array.
+ on any kind of real array. Example needed, so ..
     
  Say you have a String array:
  
@@ -53,12 +47,20 @@
     
 ----------------------------------------------------------------------------------
  
- A quick overview:
+ A quick class overview:
  
- class Combination      unique combinations, no duplications, order is ignored
- class CombinationSet   range of combinations at different lengths
- class Variation        all possible variations, includes duplication, order matters
- class VariationSet     range of variations at different lengths
- class Permutation      all possible ways to order the elements, no duplications
+ Combination      unique combinations, no duplications, order is ignored
+ CombinationSet   range of combinations at different lengths
+ Variation        all possible variations, includes duplication, order matters
+ VariationSet     range of variations at different lengths
+ Permutation      all possible ways to order the elements, no duplications
+
+==================================================================================
+
+ Props, Thank-you's
+ 
+ The code for permutation is based one code by Michael Gillelands at
+ http://www.merriampark.com/perm.htm, which he claims to be an implementation of
+ Kenneth H. Rosen, Discrete Mathematics and Its Applications, 2nd edition (NY: McGraw-Hill, 1991), pp. 282-284
    
     
