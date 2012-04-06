@@ -7,6 +7,10 @@
 		
 		https://github.com/fjenett/combinatorics
 		
+		To be able to compile with this you need to fetch yourself these:
+		compiler.jar (http://code.google.com/p/closure-compiler/downloads/list)
+		GitHubUploadTask (https://github.com/oyvindkinsey/GitHubUploadTask)
+		
     </description>
 	
 	<!-- + + + + + + + + + + + + + + + + + + + + + + + + + + + +
@@ -15,14 +19,16 @@
 	<target name="settings">
 
 		<property name="author" 		value="Florian Jenett"/>
-		<property name="copyright" 		value="(c) 2009-2011"/>
+		<property name="copyright" 		value="(c) 2009-2012"/>
 		<property name="libraryName"  	value="Combinatorics"/>
 		<property name="versionNumber"  value="0.0.7"/>
-		<property name="libManagerNumber"  value="1"/>
+		<property name="libManagerNumber"  
+										value="1"/>
 		<property name="yourLink"  		value="http://bezier.de/" />
 		<property name="keywords" 		value="math, combinatorics, combination, variation, permutation, array"/>
 		<property name="processing" 	location="/Users/fjenett/Documents/Processing/libraries"/>
 		<property name="javaVersion" 	value="1.5"/>
+		<property name="resources" 		value="../_resources/"/>
 
 		<property name="libraryClasspath"  location="/Applications/Processing.app/Contents/Resources/Java/"/>
 		<path id="library-classes-add">
@@ -34,15 +40,29 @@
 			</fileset>
 		</path>
 	
-		<property name="jarFile" value="${libraryName}.jar"/>
-		<property name="src" location="src"/>
-		<property name="bin" location="bin"/>
-		<property name="javadoc" location="documentation"/>
-		<property name="dist" location="distribution"/>
-		<property name="build" location="build"/>
+		<property name="jarFile" 		value="${libraryName}.jar"/>
+		<property name="src" 			location="src"/>
+		<property name="bin" 			location="bin"/>
+		<property name="javadoc" 		location="documentation"/>
+		<property name="dist" 			location="${libraryName}"/>
+		<property name="build" 			location="build"/>
 		
+		<!-- GOOGLE CLOSURE COMPILER -->
 		<taskdef name="jscomp" classname="com.google.javascript.jscomp.ant.CompileTask"
-		           			   classpath="../_resources/closure-compiler/compiler.jar"/>
+		           			   classpath="${resources}closure-compiler/compiler.jar"/>
+		
+		<!-- GITHUB upload -->
+		<property file="${resources}github.properties" />
+		<path id="githubhuploadtask.classpath">
+			<pathelement location="."/>
+			<fileset dir="${resources}">
+				<include name="githubupload.jar" />
+			</fileset>
+		</path>
+		<taskdef name="upload" 
+				 classname="no.kinsey.ant.GitHubUploadTask" 
+				 classpathref="githubhuploadtask.classpath" 
+				 loaderref="githubhuploadtask.classpath.loader" />
 	</target>
 	
 	<!-- + + + + + + + + + + + + + + + + + + + + + + + + + + + +
@@ -58,14 +78,6 @@
 	
 		<echo>Start to build the library ...
 		${versionNumber}, build #${build.number} on ${date}</echo>
-		<!--
-			add ant-contrib package, needed for <foreach>
-		-->
-		<taskdef resource="net/sf/antcontrib/antcontrib.properties">
-		  <classpath>
-		    <pathelement location="lib/ant-contrib-1.0b3.jar"/>
-		  </classpath>
-		</taskdef>
 
 		<mkdir dir="${dist}"/>
 	</target>
@@ -74,29 +86,14 @@
 		COMPILE
 	 + + + + + + + + + + + + + + + + + + + + + + + + + + + + -->
 	<target name="compile" depends="init" >  	
+		
 		<mkdir dir="${bin}"/>
+		
 		<javac srcdir="${src}" destdir="${bin}" source="${javaVersion}" target="${javaVersion}">
 			<classpath>
 				<path refid="library-classpath"/>
 			</classpath>
 		</javac>
-	</target>
-	
-	<!-- + + + + + + + + + + + + + + + + + + + + + + + + + + + +
-		BUILD
-	 + + + + + + + + + + + + + + + + + + + + + + + + + + + + -->
-	<target name="build" depends="compile" >
-  
-	  	<mkdir dir="${dist}" />
-	  	<mkdir dir="${dist}/library" />
-	  	<jar jarfile="${dist}/library/${jarFile}" basedir="${bin}"/>
-	
-	  	<mkdir dir="${dist}/examples" />
-	  	<copy todir="${dist}/examples">
-	  		<fileset dir="examples"/>
-	  	</copy>
-	
-		<mkdir dir="${dist}/documentation" />
 		
 		<concat destfile="${bin}/${libraryName}.js">
 			<!-- this list is sorted! -->
@@ -111,7 +108,16 @@
 				<file name="CombinationSet.js" />
 			</filelist>
 		</concat>
-		
+	</target>
+	
+	<!-- + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+		BUILD
+	 + + + + + + + + + + + + + + + + + + + + + + + + + + + + -->
+	<target name="build" depends="compile" >
+  
+	  	<mkdir dir="${dist}" />
+	  	<mkdir dir="${dist}/library" />
+	  	<jar jarfile="${dist}/library/${jarFile}" basedir="${bin}"/>
 		<jscomp compilationLevel="simple" 
 				warning="default" 
 		        debug="false" 
@@ -121,6 +127,16 @@
 				<file name="${libraryName}.js" />
 			</sources>
 		</jscomp>
+	
+	  	<mkdir dir="${dist}/examples" />
+	  	<copy todir="${dist}/examples">
+	  		<fileset dir="examples"/>
+	  	</copy>
+		
+		<copy todir="${dist}">
+			<fileset file="resources/library.properties" />
+			<fileset file="README" />
+		</copy>
 
 	</target>
   	
@@ -129,7 +145,6 @@
 	 + + + + + + + + + + + + + + + + + + + + + + + + + + + + -->
 	<target name="documentation" depends="build">
 		
-		<!-- create the java documentation of the library -->
 	 	<mkdir dir="${javadoc}" />
 	 	<javadoc bottom="processing library ${libraryName} by ${author}. ${copyright}"
 				 destdir="${javadoc}" 
@@ -145,7 +160,8 @@
 				<path refid="library-classpath" />
 			</classpath>
 	 	</javadoc>
-	
+		
+		<mkdir dir="${dist}/documentation" />
 		<copy todir="${dist}/documentation">
 			<fileset dir="${javadoc}" />
 		</copy>
@@ -169,81 +185,19 @@
 		RELEASE
 	 + + + + + + + + + + + + + + + + + + + + + + + + + + + + -->
 	<target name="release" depends="documentation">
-
-	  	<zip destfile="${dist}/${libraryName}-${versionNumber}.zip"
-	  	       basedir="${dist}"
-	  	       excludes="**/_DS.Store"
+		
+	  	<zip destfile="releases/${libraryName}-${versionNumber}.zip"
+	  	     basedir="${dist}"
+	  	     excludes="**/_DS.Store"
 		/>
- 	
-	  	<!-- organize the ${dist} folder -->
-		<!--
-	  	<mkdir dir="${dist}/web" />
-	  	<move todir="${dist}/web/documentation">
-	  		<fileset dir="${dist}/documentation" />
-	  	</move>
-  	
-	  	<move todir="${dist}/web/examples">
-	  		<fileset dir="${dist}/examples" />
-	  	</move>
-  	
-	  	<delete dir="${dist}/library" />
-  	
-	  	<copy todir="${dist}/web">
-	  		<fileset dir="web" />
-	  	</copy>
-		-->
-  	
-	  	<!--
-	  	format the index.html file. 
-	  	regular expressions are used to parse the web index.html file. 
-	  	key words starting and ending with ## are replaced by values 
-	  	defined earlier in the beginning of this build file.
-	  	-->
-  		<!--
-	  	<replaceregexp file="${dist}/web/index.html"
-	  	                         match="##yourLibrary##"
-	  	                         replace="${libraryName}"
-	  	                         flags="g" />
-  	
-	  	<replaceregexp file="${dist}/web/index.html"
-								match="##author##"
-								replace="${author}"
-								flags="g" />
-  	
-	  	<replaceregexp file="${dist}/web/index.html"
-								match="##versionNumber##"
-								replace="${versionNumber}"
-								flags="g" />
-  	
-		<replaceregexp file="${dist}/web/index.html"
-								match="##yourLink##"
-	  							replace="${yourLink}"
-								flags="g" />
-  	
-	  	<replaceregexp file="${dist}/web/index.html"
-	  							match="##date##"
-	  	  						replace="${date}"
-	  	  						flags="g" />
-  	
-	  	<replaceregexp file="${dist}/web/index.html"
-	  							match="##keywords##"
-	  	  						replace="${keywords}"
-	  	  						flags="g" />
-							
-		<antcall target="processExamples" />
-		-->
-	
-	  	<!-- finish organizating library's distribution -->
-		<!--
-	  	<mkdir dir="${dist}/web/download" />
-	  	<copy file="${dist}/${libraryName}-${versionNumber}.zip" todir="${dist}/web/download" />
-  	
-	  	<copy todir="${processing}/${libraryName}/documentation">
-			<fileset dir="${javadoc}" />
-		</copy>
-		-->
-  	
-	  	<!-- done, finished. -->
+		
+		<!-- <upload user="${github.user}" 
+				repo="combinatorics" 
+				username="${github.username}" 
+				token="${github.token}" 
+				description="Release ${versionNumber}" 
+				path="releases/${libraryName}-${versionNumber}.zip" /> -->
+		
 	</target>
  
  	
@@ -254,42 +208,8 @@
 		<delete dir="${bin}" />
 		<delete dir="${javadoc}" />
 		<delete dir="${build}" />
-	</target> 
-	
-	
-	<!-- + + + + + + + + + + + + + + + + + + + + + + + + + + + +
-		PROCESS EXAMPLES
-	 + + + + + + + + + + + + + + + + + + + + + + + + + + + + -->
-	<target name="processExamples">
-		<dirset id="examples.contents" dir="examples" excludes="*/*"/>
-		<property name="examples.list" refid="examples.contents"/>
-		<foreach list="${examples.list}" target="addExamples" param="exampleDir" delimiter=";">
-		</foreach>
-		<!--echo>${examples.list}</echo-->
-		<!--foreach param="exampleDir" target="addExamples">
-			<path>
-				<dirset id="examples.contents" dir="examples" excludes="*/*"/>
-			</path>
-		</foreach-->
-			<replaceregexp file="${dist}/web/index.html"
-	  							match="(##examples##)"
-	  	  						replace=""
-	  	  						flags="g" />
+		<delete dir="${dist}" />
 	</target>
 	
-	<!-- + + + + + + + + + + + + + + + + + + + + + + + + + + + +
-		ADD EXAMPLES
-	 + + + + + + + + + + + + + + + + + + + + + + + + + + + + -->
-	<target name="addExamples" depends="settings">
-		<property name="exampleZipped" value="${exampleDir}.zip"/>
-		<zip destfile="${dist}/web/examples/${exampleZipped}"
-  	       basedir="${dist}/web/examples/${exampleDir}/"
-  	       excludes="**/.DS_Store, **/applet"
-		/>
-		<replaceregexp file="${dist}/web/index.html"
-  							match="(##examples##)"
-  	  						replace="&lt;li&gt;&lt;a href=&quot;examples/${exampleDir}/applet/index.html&quot;&gt;${exampleDir}&lt;/a&gt;&lt;/li&gt; \1"
-  	  						flags="g" />
-	</target>
 </project>
 

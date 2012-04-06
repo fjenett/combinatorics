@@ -59,8 +59,14 @@
 
  Props, Thank-you's
  
- The code for permutation is based one code by Michael Gillelands at
- http://www.merriampark.com/perm.htm, which he claims to be an implementation of
- Kenneth H. Rosen, Discrete Mathematics and Its Applications, 2nd edition (NY: McGraw-Hill, 1991), pp. 282-284
+ The Java (and JavaScript) code for permutation is based on code by Michael Gillelands 
+ (at http://www.merriampark.com/perm.htm), which he claims to be an implementation of
+ Kenneth H. Rosen, Discrete Mathematics and Its Applications, 
+ 2nd edition (NY: McGraw-Hill, 1991), pp. 282-284
+
+ BigInteger (in JavaScript version) was written by John Tobey and Matthew Crumley
+ and is available at http://silentmatt.com/biginteger/ and
+ https://github.com/jtobey/javascript-bignum
+ 
    
     

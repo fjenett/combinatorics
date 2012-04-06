@@ -22,3 +22,8 @@ hidden/
 
 web-export
 sketch.properties
+
+*.xcodeproj
+
+Combinatorics
+releases
