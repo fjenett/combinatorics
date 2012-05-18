@@ -47,12 +47,11 @@ extends CombinatoricsBaseSet
 		totalResults = BigInteger.ZERO;
 		
 		// calc total results
-		Combination c[] = new Combination[to-from+1];
 		for ( int i = from; i <= to; i++ )
 		{
-			c[i] = new Combination(elements, i);
+			Combination c = new Combination(elements, i);
 			totalResults = 
-				totalResults.add( c[i].total() );
+				totalResults.add( c.total() );
 		}
 		
 		// first generator
