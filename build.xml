@@ -1,4 +1,4 @@
-<project name="Combinatorics library" default="install" basedir="./">
+<project name="Combinatorics library" default="release" basedir="./">
     
 	<description>
         
@@ -186,7 +186,7 @@
 	<!-- + + + + + + + + + + + + + + + + + + + + + + + + + + + +
 		RELEASE
 	 + + + + + + + + + + + + + + + + + + + + + + + + + + + + -->
-	<target name="release" depends="documentation">
+	<target name="release" depends="install">
 		
 	  	<zip destfile="releases/${libraryName}-${versionNumber}.zip"
 	  	     basedir="${dist}"
@@ -196,7 +196,7 @@
 		<copy tofile="releases/${libraryName}.zip">
 			<fileset file="releases/${libraryName}-${versionNumber}.zip" />
 		</copy>
-		
+
 		<copy tofile="releases/${libraryName}.txt">
 			<fileset file="${dist}/library.properties" />
 		</copy>
