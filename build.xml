@@ -196,6 +196,7 @@
 		<copy tofile="releases/${libraryName}.zip">
 			<fileset file="releases/${libraryName}-${versionNumber}.zip" />
 		</copy>
+		
 		<copy tofile="releases/${libraryName}.txt">
 			<fileset file="${dist}/library.properties" />
 		</copy>
