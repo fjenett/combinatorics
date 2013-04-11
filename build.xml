@@ -42,7 +42,7 @@
 		<property name="src" 			location="src"/>
 		<property name="bin" 			location="bin"/>
 		<property name="javadoc" 		location="documentation"/>
-		<property name="dist" 			location="${libraryName}"/>
+		<property name="dist" 			value="${libraryName}"/>
 		<property name="build" 			location="build"/>
 		
 		<!-- GOOGLE CLOSURE COMPILER -->
@@ -189,7 +189,8 @@
 	<target name="release" depends="install">
 		
 	  	<zip destfile="releases/${libraryName}-${versionNumber}.zip"
-	  	     basedir="${dist}"
+	  	     basedir=""
+	  	     includes="${dist}/**/**"
 	  	     excludes="**/_DS.Store"
 		/>
 		
