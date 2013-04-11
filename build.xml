@@ -21,7 +21,7 @@
 		<property name="author" 		value="Florian Jenett"/>
 		<property name="copyright" 		value="(c) 2009-2013"/>
 		<property name="libraryName"  	value="Combinatorics"/>
-		<property name="versionNumber"  value="0.0.10"/>
+		<property name="versionNumber"  value="0.0.11"/>
 		<property name="yourLink"  		value="http://bezier.de/" />
 		<property name="keywords" 		value="math, combinatorics, combination, variation, permutation, array"/>
 		<property name="processing" 	location="/Users/fjenett/Documents/Processing/libraries"/>
