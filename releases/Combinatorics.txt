@@ -4,5 +4,5 @@ url = https://github.com/fjenett/combinatorics
 category = Simulation / Math
 sentence = Generate combinations, variations and permutations
 paragraph =  This library provides an easy way to generate combinations, variations and permutations from a given set of values.
-version = 3005
-prettyVersion = 0.0.8
+version = 3018
+prettyVersion = 0.0.11

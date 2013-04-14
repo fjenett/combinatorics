@@ -113,7 +113,9 @@
 	 + + + + + + + + + + + + + + + + + + + + + + + + + + + + -->
 	<target name="build" depends="compile" >
   
+  		<delete dir="${dist}" />
 	  	<mkdir dir="${dist}" />
+	  	
 	  	<mkdir dir="${dist}/library" />
 	  	<jar jarfile="${dist}/library/${jarFile}" basedir="${bin}"/>
 		<jscomp compilationLevel="simple" 
@@ -126,10 +128,31 @@
 			</sources>
 		</jscomp>
 	
-	  	<mkdir dir="${dist}/examples" />
-	  	<copy todir="${dist}/examples">
-	  		<fileset dir="examples"/>
-	  	</copy>
+		<mkdir dir="${dist}/examples" />
+		<copy todir="${dist}/examples">
+			<fileset dir="examples">
+				<exclude name="**/web-export" />
+				<exclude name="**/web-export/**" />
+				<exclude name="**/.DS_Store" />
+			</fileset>
+		</copy>
+
+		<mkdir dir="${dist}/source" />
+		<copy todir="${dist}/source/java">
+			<fileset dir="${src}">
+				<include name="**/*.java" />
+				<exclude name="**/.DS_Store" />
+			</fileset>
+		</copy>
+		<copy todir="${dist}/source/js">
+			<fileset dir="${src}-js">
+				<include name="**/*.js" />
+				<exclude name="**/.DS_Store" />
+			</fileset>
+		</copy>
+		<copy tofile="${dist}/source/readme.txt">
+			<fileset file="resources/source-note.txt" />
+		</copy>
 		
 		<copy todir="${dist}">
 			<fileset file="resources/library.properties" />
